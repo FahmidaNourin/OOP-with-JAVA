@@ -7,7 +7,6 @@ public class Main {
 		Area n=new Area(1.2,42);
 		double tri2= n.Triangle();
 		System.out.println(tri2);
-		
 		double tri= n.Triangle();
 		System.out.println(tri);
 	}
