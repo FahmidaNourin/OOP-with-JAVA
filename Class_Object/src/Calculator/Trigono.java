@@ -1,19 +1,40 @@
 package Calculator;
 
 public class Trigono {
-
-	static double tan(double degree) {
+	 static private double return1;
+	 static private double return2;
+	 static private double return3;
+	 static private double degree;
+	 static void setTan(double d) {
+		 degree=d;
+	 }
+	static void tan() {
 		double radians = Math.toRadians(degree);
-		return Math.tan(radians);
+		return1= Math.tan(radians);
 	}
-
-	static double sin(double degree) {
-		double radians = Math.toRadians(degree);
-		return Math.sin(radians);
+	static double getTan() {
+		return return1;
 	}
+	static void setSin(double d) {
+		degree=d;
+	}
+	
 
-	static double cos(double degree) {
+	static void sin() {
 		double radians = Math.toRadians(degree);
-		return Math.cos(radians);
+		return2=Math.sin(radians);
+	}
+	static double getSin() {
+		return return2;
+	}
+	 static void setCos(double d) {
+		 degree=d;
+	 }
+	static void Cos() {
+		double radians = Math.toRadians(degree);
+		return3= Math.tan(radians);
+	}
+	static double getCos() {
+		return return3;
 	}
 }

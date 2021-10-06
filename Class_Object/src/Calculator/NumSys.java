@@ -1,6 +1,7 @@
 package Calculator;
 
 public class NumSys {
+	
 	static int bin(int N) {
 
 		int B_Number = 0;
