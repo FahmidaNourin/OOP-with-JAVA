@@ -1,24 +1,55 @@
 package Calculator;
 
 public class Measurment {
-	static double Circale(int radius) {
+	static private double radius;
+	static private double height;
+	static private double base;
+	static private double arm;
+	static private double return3;
+	static private double return1;
+	static private double return2;
+	
+	static void setRed(double r) {
+		radius=r;
+	}
+	
+	static void Circale() {
 
 		double pi = 3.142, area;
 
 		area = pi * radius * radius;
 
-		return (area);
+		return1= area;
+	}
+	static double getCircale() {
+		return return1;
+		
 	}
 
-	static double Triangle(double h, double b) {
+	static void setArms(double h, double b) {
+		height=h;
+		base=b;
+	}
+	static void Triangle() {
 		double area;
-		area = (h * b) / 2;
-		return (area);
+		area = (height * base) / 2;
+		return2= area;
 	}
 
-	static int Square(int side) {
-		int area = side * side;
-		return area;
+	static double getTriangle() {
+		return return2;
+		
+	}
+	static void setArms(double a) {
+		arm=a;
+	}
+	static void Square() {
+		double area = arm * arm;
+		return3 =area;
+	}
+	static double getSquare() {
+		return return3;
+		
 	}
 
 }

@@ -1,39 +1,64 @@
 package Calculator;
 
 public class NumSys {
-	
-	static int bin(int N) {
+	static private int number;
+	static private int number1;
+	static private int number2;
+	static private int return1;
+	static private String return2;
+	static private int return3;
+	static void setBin(int N) {
+		number=N;
+	}
+	static void bin() {
 
 		int B_Number = 0;
 		int cnt = 0;
-		while (N != 0) {
-			int rem = N % 2;
+		while (number != 0) {
+			int rem = number % 2;
 			double c = Math.pow(10, cnt);
 			B_Number += rem * c;
-			N /= 2;
+			number /= 2;
 
 			cnt++;
 		}
 
-		return B_Number;
+		return1= B_Number;
+	}
+	static int getBin() {
+		return return1;
+	}
+	static void setHex(int N) {
+		number1=N;
+	}
+	
+
+	static void hexa() {
+		return2= (Integer.toHexString(number1));
+	}
+	static String getHex() {
+		return return2;
+	}
+	static void setOct(int N) {
+		number2=N;
 	}
 
-	static String hexa(int n) {
-		return (Integer.toHexString(n));
-	}
-
-	static int oct(int deciNum) {
+	static void oct() {
 		int octalNum = 0, countval = 1;
-		while (deciNum != 0) {
+		while (number2!= 0) {
 
-			int remainder = deciNum % 8;
+			int remainder =number2 % 8;
 
 			octalNum += remainder * countval;
 
 			countval = countval * 10;
-			deciNum /= 8;
+			number2 /= 8;
 		}
-		return (octalNum);
+		return3= (octalNum);
 	}
+	static int getOct() {
+		return return3;
+	}
+	
 
 }
