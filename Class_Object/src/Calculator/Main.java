@@ -67,8 +67,24 @@ public class Main {
 		System.out.println(fa.getTriangle());
 		System.out.println(fa.getSquare());
 		
+		Series san=new Series();
+		san.setSum(0,100,2);
+		
+		san.setSub(0,100,2);
+		san.setMul(0,100,2);
+		san.setdiv(0,100,2);
+		san.sumSeries();
+		
+		san.subSeries();
+		System.out.println("series ");
+		san.MulSeries();
+		san.divSeries();
+		
+		System.out.println("series "+san.getSum());
+		System.out.println(san.getSub());
+		System.out.println(san.getMul());
+		System.out.println(san.getdiv());
+		
 		
 	}
-	
-
 }
