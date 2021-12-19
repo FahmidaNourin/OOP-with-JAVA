@@ -1,13 +1,26 @@
-package Calculator;
+package Function_1;
 
 import java.util.Scanner;
+
+import Calculator.Measurment;
+import Calculator.Normal;
+import Calculator.NumSys;
+import Calculator.Series;
+import Calculator.Trigono;
 
 public class Main {
 
 	public static void main(String[] args) {
-
-		Normal nou = new Normal(); // nou is the object of Normal class
 		Scanner input=new Scanner(System.in);
+		System.out.println("Enter 1 for Normal Calculation");
+		System.out.println("Enter 2 for Trigonometric Calculation");
+		System.out.println("Enter 3 for Numer System Calculation");
+		System.out.println("Enter 4 for Measurment Calculation");
+		System.out.println("Enter 5 for Series Calculation");
+		int decision=input.nextInt();
+		
+		if( decision==1) {
+		Normal nou = new Normal(); 
 		float x=input.nextFloat();
 		float y=input.nextFloat();
 		nou.setAdd(x,y);
@@ -26,8 +39,9 @@ public class Main {
 		nou.Div();
 		float pro3=nou.getDiv();
 		System.out.println(pro3);
+		}
 		
-		
+		else if(decision==2) {
 		Trigono jany=new Trigono();
 		jany.setTan(45);
 		jany.tan();
@@ -43,9 +57,10 @@ public class Main {
 		jany.Cos();
 		double res2=jany.getCos();
 		System.out.println(res2);
+		}
 		
-		
-		NumSys raf=new NumSys();
+		else if(decision==3) {
+		NumSystem raf=new NumSystem();
 		raf.setBin(17);
 		raf.bin();
 		int Bin=raf.getBin();
@@ -60,7 +75,9 @@ public class Main {
 		raf.oct();
 		int Oct=raf.getOct();
 		System.out.println(Oct);
+		}
 		
+		else if(decision==4) {
 		Measurment fa=new Measurment();
 		fa.setRed(5);
 		fa.setArms(2,4);
@@ -71,6 +88,9 @@ public class Main {
 		System.out.println(fa.getCircale());
 		System.out.println(fa.getTriangle());
 		System.out.println(fa.getSquare());
+		}
+		else if(decision==5)
+		{
 		
 		Series san=new Series();
 		san.setSum(0,100,2);
@@ -89,7 +109,10 @@ public class Main {
 		System.out.println(san.getSub());
 		System.out.println(san.getMul());
 		System.out.println(san.getdiv());
+		}
 		
 		
+
 	}
+
 }

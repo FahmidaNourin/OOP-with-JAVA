@@ -1,0 +1,2 @@
+module Rjp_class {
+}
