@@ -20,6 +20,7 @@ public class Threshold implements Discountable{
 	public void setDiscount(double discount) {
 		this.discount = discount;
 	}
+	@Override
 	public double discountedPrice(double price) {
 		double res;
 		res=price*(discount/100);

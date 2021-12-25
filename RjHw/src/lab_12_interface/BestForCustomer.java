@@ -39,8 +39,14 @@ public class BestForCustomer implements Discountable {
 	public double discountedPrice(double price) {
 		double res1;
 		double res2;
-		res1=price*(discount/100);
-		res2=price*(threshold/100);
+		res1=price*(percentage/100);
+		if(price>threshold) {
+			res2=discount;
+		}
+		else {
+			res2=0;
+		}
+	
 		if(res1>res2) {
 			return price-res1;
 		}
