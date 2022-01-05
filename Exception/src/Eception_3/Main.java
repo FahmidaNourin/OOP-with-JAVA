@@ -7,13 +7,14 @@ public class Main {
 	        try {
 	        	System.out.println("Enter the radius:");
 		         double r= input.nextDouble();
-		         double  area=(22*r*r)/7 ;
+		         double  area=3.1416*r*r ;
 		         System.out.println("Area of Circle is: " + area);
 	        }
 	        catch(Exception e) {
 				System.out.println(e);
 				System.out.println("Invalied input");
 			}
+	        System.out.println("This should be printed...");
       
 	   }
 		
